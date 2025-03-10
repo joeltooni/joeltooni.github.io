@@ -1,0 +1,16 @@
+{
+    "certifications": [
+        {
+            "name": "Python for Data Science",
+            "issuer": "IBM",
+            "date": "2023-06-15",
+            "link": "https://your-link-to-cert"
+        },
+        {
+            "name": "AWS Certified Solutions Architect",
+            "issuer": "Amazon",
+            "date": "2024-01-20",
+            "link": "https://your-link-to-cert"
+        }
+    ]
+}

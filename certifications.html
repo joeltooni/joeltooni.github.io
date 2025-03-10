@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certifications</title>
+</head>
+<body>
+    <h1>My Certifications</h1>
+    <p>Here are some of the certifications I have earned:</p>
+
+    <ul id="cert-list">
+        <!-- This section will be auto-updated -->
+    </ul>
+
+    <script>
+        fetch("certifications.json")  // JSON file containing certificates
+            .then(response => response.json())
+            .then(data => {
+                let list = document.getElementById("cert-list");
+                data.certifications.forEach(cert => {
+                    let li = document.createElement("li");
+                    li.innerHTML = `<b>${cert.name}</b> - ${cert.issuer} (${cert.date}) <a href="${cert.link}">View</a>`;
+                    list.appendChild(li);
+                });
+            });
+    </script>
+</body>
+</html>
